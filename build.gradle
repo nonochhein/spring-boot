@@ -4,14 +4,17 @@
 
 plugins {
 	id "base"
-	 id "org.sonarqube" version "7.5.0.8588"
+	id "org.sonarqube" version "7.5.0.8588"
 }
+
 sonar {
-  properties {
-    property "sonar.projectKey", "nonochhein_spring-boot"
-    property "sonar.organization", "nonochhein"
-  }
+	properties {
+		property "sonar.host.url", "https://sonarcloud.io"
+		property "sonar.projectKey", "nonochhein_spring-boot"
+		property "sonar.organization", "nonochhein"
+	}
 }
+
 description = "Spring Boot Build"
 
 defaultTasks 'build'
